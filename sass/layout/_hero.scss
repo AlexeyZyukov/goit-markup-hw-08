@@ -1,0 +1,44 @@
+/* стилизация Главного блока Hero */
+.hero {
+  padding: 0;
+}
+
+.hero__bg-image {
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/background/Hero_bcg.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+}
+
+/* формирование padding секции hero и отступа перед кнопкой*/
+
+.hero {
+  &__definition {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    max-width: 630px;
+    margin-right: auto;
+    margin-left: auto;
+    color: $accent-button-text;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
