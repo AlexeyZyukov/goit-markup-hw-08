@@ -225,30 +225,14 @@ body {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  border: 1px solid red;
-}
-
-@media screen and (min-width: 480px) {
-  .section {
-    width: 480px;
-    background-color: #cef837;
-    border: 1px solid #0066ff;
-  }
 }
 
 /* устанавливаем св-ва Контейнера */
 .container {
+  width: 1200px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-    background-color: #fdfcfc;
-    border: 1px solid red;
-  }
 }
 
 /* header - верхняя линия сайта */
@@ -259,7 +243,21 @@ body {
 }
 
 /* flexbox для header */
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: auto;
+}
+
 .navigation-block__link {
+  position: relative;
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: #212121;
@@ -282,7 +280,14 @@ body {
   letter-spacing: 0.02em;
 }
 
+.contacts {
+  display: flex;
+}
+
 .contacts > .contacts__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -316,6 +321,7 @@ body {
 }
 
 .smartphone {
+  /* display: inline-flex; */
   width: 10px;
   height: 16px;
   margin-right: 10px;
@@ -789,7 +795,7 @@ body {
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/Hero_bcg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 100%;
+  max-width: 1600px;
   height: 600px;
   margin: 0 auto;
 }
@@ -827,12 +833,6 @@ body {
   flex-basis: calc((100% - 30px * 4) / 4);
   margin-top: 30px;
   margin-left: 30px;
-}
-
-@media screen and (min-width: 768) {
-  .priorities {
-    width: 768px;
-  }
 }
 
 .priorities__item + .priorities__item {
@@ -885,12 +885,6 @@ body {
 /* секция Чем мы занимаемся и Наша команда */
 .company-activity {
   padding-top: 0;
-}
-
-@media screen and (min-width: 768px) {
-  .company-activity {
-    width: 768px;
-  }
 }
 
 .activity-description {
@@ -986,58 +980,6 @@ body {
   margin-bottom: 16px;
 }
 
-/* секция Наша команда */
-.ourteam {
-  background-color: #f5f4fa;
-}
-
-.ourteam__header {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  text-align: center;
-  line-height: 1.17;
-}
-
-/* flex список Наша команда - сетка */
-.ourteam-members {
-  /* Компенсируем маржины элементов */
-  margin-left: calc(-1 * 30px);
-  margin-top: calc(-1 * 30px);
-}
-
-.ourteam-members__item {
-  margin-left: 30px;
-  margin-top: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-/* our-team представление членов команды */
-.ourteam-members {
-  /* подписи к фотографиям сотрудников */
-}
-
-.ourteam-members__title {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-.ourteam-members__name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 10px;
-}
-
-.ourteam-members__position {
-  color: #757575;
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 16px;
-}
-
 /* our customers */
 .customers-section__header {
   font-weight: 700;
@@ -1049,33 +991,23 @@ body {
   margin-bottom: 50px;
 }
 
+.customers-list {
+  display: inline-flex;
+}
+
 .customers-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
 .customers-list__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (max-width: 479px) {
-  .customers-list__link {
-    width: 210px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .customers-list__link {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1170px) {
-  .customers-list__link {
-    width: 170px;
-  }
 }
 
 .customers-list__icon {
@@ -1101,7 +1033,17 @@ body {
 }
 
 /* сетка элементов футера */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
 /* расчет ширины элемента выполнятся от ширины 1170px */
+.footer__item {
+  flex-basis: calc((100% / 12) * 3 - 22.5px);
+}
+
 .footer__item:not(:first-of-type) {
   margin-left: 30px;
 }

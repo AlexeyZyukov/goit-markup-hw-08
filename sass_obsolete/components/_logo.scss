@@ -1,0 +1,17 @@
+/* logo style */
+.logo {
+  display: block;
+  /* min-width: 145px; */
+  font-family: Raleway, sans-serif;
+  color: $main-text-color;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.logo-color {
+  color: $logo-color;
+}

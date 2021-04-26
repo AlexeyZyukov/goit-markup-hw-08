@@ -6,20 +6,20 @@
 }
 
 /* flexbox для header */
-// .header-navigation {
-//   display: flex;
-//   align-items: center;
-// }
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
 
 .navigation-block {
-  // display: flex;
-  // flex-wrap: wrap;
-  // align-items: center;
-  // margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: auto;
 
   &__link {
-    // position: relative;
-    // display: block;
+    position: relative;
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     color: $main-text-color;
@@ -46,12 +46,12 @@
 }
 
 .contacts {
-  // display: flex;
+  display: flex;
 
   & > .contacts__link {
-    // display: inline-flex;
-    // justify-content: center;
-    // align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -88,6 +88,7 @@
 }
 
 .smartphone {
+  /* display: inline-flex; */
   width: 10px;
   height: 16px;
   margin-right: 10px;

@@ -11,9 +11,6 @@
     margin-top: #{$card-set-gap};
     margin-left: #{$card-set-gap};
   }
-  @media screen and (min-width: 768) {
-    width: 768px;
-  }
 }
 
 .priorities__item + .priorities__item {
