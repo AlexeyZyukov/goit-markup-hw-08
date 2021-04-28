@@ -6,7 +6,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1ps solid red;
+  outline: 5ps solid red;
 }
 
 /* сброс стиля кнопок */
@@ -47,10 +47,6 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
 }
 
 /* убираем маркировку списка */

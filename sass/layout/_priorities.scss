@@ -1,23 +1,40 @@
 /* Приоритеты компании  */
 
 .priorities {
-  // display: flex;
-  // flex-wrap: wrap;
-  margin-top: calc(-1 * #{$card-set-gap});
-  margin-left: calc(-1 * #{$card-set-gap});
-
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$card-set-gap});
+    margin-left: calc(-1 * #{$card-set-gap});
+  }
   &__item {
-    // flex-basis: calc((100% - #{$card-set-gap} * 4) / 4);
-    margin-top: #{$card-set-gap};
-    margin-left: #{$card-set-gap};
-  }
-  @media screen and (min-width: 768) {
-    width: 768px;
-  }
-}
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
 
-.priorities__item + .priorities__item {
-  margin-left: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-basis: calc((100% - #{$card-set-gap} * 2) / 2);
+
+      margin-top: #{$card-set-gap};
+      margin-left: #{$card-set-gap};
+
+      background-color: yellow;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - #{$card-set-gap} * 4) / 4);
+      margin-top: #{$card-set-gap};
+      margin-left: #{$card-set-gap};
+      background-color: rgb(186, 241, 142);
+
+      // .priorities__item + .priorities__item {
+      //   margin-left: 30px;
+      // }
+    }
+  }
 }
 
 /* формирование и позиционирование картинок svg приоритета через background-image */
@@ -51,11 +68,6 @@
   background-image: url(../images/svg/astronaut.svg);
 }
 
-.priorities__text {
-  color: $secondary-text-color;
-  line-height: 1.71;
-}
-
 .priorities__header {
   font-weight: 700;
   font-size: 14px;
@@ -64,4 +76,13 @@
   text-transform: uppercase;
 
   margin-bottom: 10px;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+}
+
+.priorities__text {
+  color: $secondary-text-color;
+  line-height: 1.71;
 }

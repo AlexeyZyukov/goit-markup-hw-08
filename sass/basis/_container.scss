@@ -1,6 +1,8 @@
 /* устанавливаем св-ва Контейнера */
 .container {
-  width: 100%;
+  max-width: 1200px;
+  min-width: 320px;
+  height: 100%;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -17,8 +19,8 @@
     border: 1px solid red;
   }
 
-  @media screen and (min-width: 1170px) {
-    width: 1170px;
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
     background-color: rgb(239, 247, 166);
     border: 1px solid red;
   }
