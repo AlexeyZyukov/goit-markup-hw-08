@@ -19,7 +19,7 @@
 
   &__link {
     // position: relative;
-    // display: block;
+    display: block;
     padding-top: 32px;
     padding-bottom: 32px;
     color: $main-text-color;
@@ -33,10 +33,10 @@
   }
 }
 
-/* установка расстояния 50px между элементами */
-.navigation-block__item:not(:last-child) {
-  margin-right: 50px;
-}
+// /* установка расстояния 50px между элементами */
+// .navigation-block__item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
 .link-font {
   font-weight: 500;
@@ -46,12 +46,12 @@
 }
 
 .contacts {
-  // display: flex;
+  display: flex;
 
   & > .contacts__link {
-    // display: inline-flex;
-    // justify-content: center;
-    // align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -73,9 +73,9 @@
     }
   }
 
-  &__link + &__link {
-    margin-left: 50px;
-  }
+  // &__link + &__link {
+  //   margin-left: 50px;
+  // }
 }
 
 .e-mail {

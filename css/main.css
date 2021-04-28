@@ -157,6 +157,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  outline: 1ps solid red;
 }
 
 /* сброс стиля кнопок */
@@ -199,6 +200,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 480px) {
+  body {
+    width: 480px;
+  }
+}
+
 /* убираем маркировку списка */
 .no-list {
   list-style: none;
@@ -226,18 +233,12 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
   border: 1px solid red;
-}
-
-@media screen and (min-width: 480px) {
-  .section {
-    width: 480px;
-    background-color: #cef837;
-    border: 1px solid #0066ff;
-  }
+  background-color: #76daf8;
 }
 
 /* устанавливаем св-ва Контейнера */
 .container {
+  width: 100%;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
@@ -246,7 +247,23 @@ body {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    background-color: #fdfcfc;
+    background-color: #73fc24;
+    border: 1px solid red;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    background-color: #fabaf7;
+    border: 1px solid red;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .container {
+    width: 1170px;
+    background-color: #eff7a6;
     border: 1px solid red;
   }
 }
@@ -260,6 +277,7 @@ body {
 
 /* flexbox для header */
 .navigation-block__link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: #212121;
@@ -270,11 +288,6 @@ body {
   color: #2196f3;
 }
 
-/* установка расстояния 50px между элементами */
-.navigation-block__item:not(:last-child) {
-  margin-right: 50px;
-}
-
 .link-font {
   font-weight: 500;
   font-size: 14px;
@@ -282,7 +295,14 @@ body {
   letter-spacing: 0.02em;
 }
 
+.contacts {
+  display: flex;
+}
+
 .contacts > .contacts__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -301,10 +321,6 @@ body {
 .contacts__link:hover .smartphone,
 .contacts__link:focus .smartphone {
   fill: #2196f3;
-}
-
-.contacts__link + .contacts__link {
-  margin-left: 50px;
 }
 
 .e-mail {
@@ -329,10 +345,6 @@ body {
 
 .current::after {
   content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -1px;
-  transform: translate(-50%, 0);
   width: 48px;
   height: 4px;
   background-image: url(../images/svg/line.svg);
@@ -692,15 +704,6 @@ body {
 }
 
 /* формирование формы ввода почты в футере */
-.call-to-sign {
-  flex-grow: 1;
-}
-
-.call-to-sign__input {
-  display: flex;
-  justify-content: space-between;
-}
-
 .call-to-sign__email {
   padding-left: 16px;
   width: 358px;
@@ -817,14 +820,11 @@ body {
 
 /* Приоритеты компании  */
 .priorities {
-  display: flex;
-  flex-wrap: wrap;
   margin-top: calc(-1 * 30px);
   margin-left: calc(-1 * 30px);
 }
 
 .priorities__item {
-  flex-basis: calc((100% - 30px * 4) / 4);
   margin-top: 30px;
   margin-left: 30px;
 }
@@ -887,9 +887,9 @@ body {
   padding-top: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1170px) {
   .company-activity {
-    width: 768px;
+    display: none;
   }
 }
 
@@ -910,8 +910,7 @@ body {
   flex-basis: calc((100% - 30px * 3) / 3);
 }
 
-.company-activity__header,
-.ourteam__header {
+.company-activity__header {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -937,53 +936,6 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   /* border: 1px solid red; */
-}
-
-/* секция ourteam */
-.ourteam {
-  background-color: #f5f4fa;
-}
-
-/* flex список Наша команда - сетка */
-.ourteam-members {
-  display: flex;
-  flex-wrap: wrap;
-  /* Компенсируем маржины элементов */
-  margin-left: calc(-1 * 30px);
-  margin-top: calc(-1 * 30px);
-}
-
-.ourteam-members__item {
-  flex-basis: calc((100% - 30px * 4) / 4);
-  margin-left: 30px;
-  margin-top: 30px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-/* our-team представление членов команды */
-.ourteam-members {
-  /* подписи к фотографиям сотрудников */
-}
-
-.ourteam-members__title {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-.ourteam-members__name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 10px;
-}
-
-.ourteam-members__position {
-  color: #757575;
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 16px;
 }
 
 /* секция Наша команда */
@@ -1049,24 +1001,23 @@ body {
   margin-bottom: 50px;
 }
 
-.customers-list__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .customers-list__link {
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 479px) {
+@media screen and (min-width: 479px) {
   .customers-list__link {
     width: 210px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 767px) {
   .customers-list__link {
     width: 226px;
   }

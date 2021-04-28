@@ -2,8 +2,8 @@
 .company-activity {
   padding-top: 0;
 
-  @media screen and (min-width: 768px) {
-    width: 768px;
+  @media screen and (max-width: 1170px) {
+    display: none;
   }
 }
 
@@ -25,8 +25,7 @@
   }
 }
 
-.company-activity__header,
-.ourteam__header {
+.company-activity__header {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -56,52 +55,5 @@
     text-transform: uppercase;
     color: $accent-button-text;
     /* border: 1px solid red; */
-  }
-}
-
-/* секция ourteam */
-
-.ourteam {
-  background-color: $secondary-bcg;
-}
-
-/* flex список Наша команда - сетка */
-.ourteam-members {
-  display: flex;
-  flex-wrap: wrap;
-  /* Компенсируем маржины элементов */
-  margin-left: calc(-1 * #{$card-set-gap});
-  margin-top: calc(-1 * #{$card-set-gap});
-
-  &__item {
-    flex-basis: calc((100% - #{$card-set-gap} * 4) / 4);
-    margin-left: #{$card-set-gap};
-    margin-top: #{$card-set-gap};
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-      0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-  }
-}
-
-/* our-team представление членов команды */
-.ourteam-members {
-  &__title {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  &__name {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    margin-bottom: 10px;
-  }
-  /* подписи к фотографиям сотрудников */
-  &__position {
-    color: $secondary-text-color;
-    font-size: 16px;
-    line-height: 1.19;
-    margin-bottom: 16px;
   }
 }

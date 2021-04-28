@@ -1,13 +1,13 @@
 /* Приоритеты компании  */
 
 .priorities {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
   margin-top: calc(-1 * #{$card-set-gap});
   margin-left: calc(-1 * #{$card-set-gap});
 
   &__item {
-    flex-basis: calc((100% - #{$card-set-gap} * 4) / 4);
+    // flex-basis: calc((100% - #{$card-set-gap} * 4) / 4);
     margin-top: #{$card-set-gap};
     margin-left: #{$card-set-gap};
   }
