@@ -225,10 +225,22 @@ body {
 /* устанавливаем параметры секции */
 .section {
   max-width: 1600px;
-  padding-top: 60px;
-  padding-bottom: 60px;
   border: 1px solid red;
   background-color: #76daf8;
+}
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /* устанавливаем св-ва Контейнера */
@@ -245,7 +257,6 @@ body {
   .container {
     width: 480px;
     background-color: #73fc24;
-    border: 1px solid red;
   }
 }
 
@@ -253,7 +264,6 @@ body {
   .container {
     width: 768px;
     background-color: #fabaf7;
-    border: 1px solid red;
   }
 }
 
@@ -261,7 +271,6 @@ body {
   .container {
     width: 1200px;
     background-color: #eff7a6;
-    border: 1px solid red;
   }
 }
 
@@ -702,8 +711,6 @@ body {
 
 /* формирование формы ввода почты в футере */
 .call-to-sign__email {
-  padding-left: 16px;
-  width: 358px;
   height: 50px;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -711,6 +718,13 @@ body {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .call-to-sign__email {
+    width: 450px;
+    margin-bottom: 20px;
+  }
 }
 
 .call-to-sign__email:invalid:not(:focus) {
@@ -1043,17 +1057,43 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1199px) {
+  .customers-section__header {
+    margin-bottom: 50px;
+  }
 }
 
 .customers-list {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 @media screen and (max-width: 767px) {
   .customers-list__item {
-    flex-basis: calc((100% - 2 * 30) / 1);
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin-left: 30px;
+    margin-top: 30px;
+    max-width: 210px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customers-list__item {
+    flex-basis: calc((100% - 3 * 30px) / 3);
+    margin-left: 30px;
+    margin-top: 30px;
+    max-width: 226px;
+  }
+}
+
+@media screen and (min-width: 1199px) {
+  .customers-list__item {
+    max-width: 170px;
   }
 }
 
@@ -1066,18 +1106,6 @@ body {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@media screen and (min-width: 768px) {
-  .customers-list__link {
-    width: 226px;
-  }
-}
-
-@media screen and (min-width: 1170px) {
-  .customers-list__link {
-    width: 170px;
-  }
 }
 
 .customers-list__icon {
@@ -1095,19 +1123,28 @@ body {
 }
 
 /* formating footer */
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+  .footer:nth-child(2) {
+    margin-left: 30px;
+  }
+}
+
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2f303a;
   color: #ffffff;
+  text-align: center;
 }
 
 /* сетка элементов футера */
 /* расчет ширины элемента выполнятся от ширины 1170px */
-.footer__item:not(:first-of-type) {
-  margin-left: 30px;
-}
-
 /* цвет логотипа Studio изменен на белый */
 .logo--footer {
   margin-bottom: 20px;
@@ -1120,6 +1157,15 @@ body {
   color: #ffffff;
   font-style: normal;
   line-height: 1.19;
+}
+
+@media screen and (max-width: 767px) {
+  .company-info {
+    margin-bottom: 60px;
+  }
+  .join-us {
+    margin-bottom: 60px;
+  }
 }
 
 .company-info__item {
