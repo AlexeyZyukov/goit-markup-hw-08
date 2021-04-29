@@ -157,7 +157,7 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 5ps solid red;
+  outline: 1px dashed red;
 }
 
 /* сброс стиля кнопок */
@@ -225,7 +225,6 @@ body {
 /* устанавливаем параметры секции */
 .section {
   max-width: 1600px;
-  border: 1px solid red;
   background-color: #76daf8;
 }
 
@@ -253,21 +252,24 @@ body {
   padding-left: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) {
   .container {
     width: 480px;
+    background-color: #73fc24;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+    background-color: #fabaf7;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    background-color: #eff7a6;
   }
 }
 
@@ -278,68 +280,98 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
+@media screen and (max-width: 767px) {
+  .header-navigation {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 /* flexbox для header */
-.navigation-block__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: #212121;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (max-width: 767px) {
+  .logo {
+    justify-content: start;
+  }
 }
 
-.navigation-block__link:hover, .navigation-block__link:focus {
-  color: #2196f3;
+@media screen and (min-width: 768px) {
+  .header-navigation {
+    display: flex;
+    align-items: baseline;
+  }
+  .navigation-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-right: auto;
+  }
+  .navigation-block__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .navigation-block__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: #212121;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .navigation-block__link:hover, .navigation-block__link:focus {
+    color: #2196f3;
+  }
+  .navigation-block__link__link + .navigation-block__link__link {
+    margin-left: 50px;
+  }
+  .link-font {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+  .contacts {
+    display: flex;
+  }
+  .contacts > .contacts__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .contacts__link {
+    color: #757575;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .contacts__link:hover, .contacts__link:focus {
+    color: #2196f3;
+  }
+  .contacts__link:hover .e-mail,
+  .contacts__link:focus .e-mail,
+  .contacts__link:hover .smartphone,
+  .contacts__link:focus .smartphone {
+    fill: #2196f3;
+  }
+  .e-mail {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: #757575;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: #757575;
+    transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
-.link-font {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-.contacts {
-  display: flex;
-}
-
-.contacts > .contacts__link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.contacts__link {
-  color: #757575;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contacts__link:hover, .contacts__link:focus {
-  color: #2196f3;
-}
-
-.contacts__link:hover .e-mail,
-.contacts__link:focus .e-mail,
-.contacts__link:hover .smartphone,
-.contacts__link:focus .smartphone {
-  fill: #2196f3;
-}
-
-.e-mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: #757575;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.smartphone {
-  width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: #757575;
-  transition: fill 250 ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (max-width: 768px) {
+  .navigation,
+  .contacts {
+    display: none;
+  }
 }
 
 .current {
@@ -363,13 +395,83 @@ body {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 24px;
+  border: 1px solid green;
 }
 
 .logo-color {
   color: #2196f3;
+}
+
+.mobile-menu-btn {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu-btn {
+    display: none;
+  }
+}
+
+.icon-close {
+  fill: #212121;
+}
+
+.is-open .icon-close {
+  display: block;
+}
+
+.is-open .icon-menu {
+  fill: #212121;
+}
+
+.mobile-menu-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  width: 100%;
+  max-width: 340px;
+  height: 100vh;
+  padding: 118px 40px 60px;
+  background: #ffffff;
+  box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04), -2px 0px 4px rgba(0, 0, 0, 0.08), -1px 0px 3px rgba(0, 0, 0, 0.16);
+  color: var(--main-text-color);
+  transition: right 0.5s;
+}
+
+.mobile-menu.is-open {
+  right: 0;
+}
+
+.mobile-menu .menu {
+  flex-direction: column;
+  font-size: 18px;
+}
+
+.mobile-menu .menu__item {
+  margin-bottom: 24px;
+}
+
+.mobile-overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(25, 28, 38, 0.2);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
 .backdrop {
@@ -780,20 +882,20 @@ body {
 }
 
 /* раздел навигация Portfolio - кнопки */
-.navigation {
+.navigation-btns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.navigation__item:not(:last-child) {
+.navigation-btns__item:not(:last-child) {
   display: block;
   margin-right: 8px;
   padding: 0;
 }
 
-.navigation__btn {
+.navigation-btns__btn {
   background-color: #f5f4fa;
   color: #212121;
   padding-top: 6px;
@@ -810,7 +912,7 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navigation__btn:hover, .navigation__btn:focus {
+.navigation-btns__btn:hover, .navigation-btns__btn:focus {
   background-color: #2196f3;
   color: #ffffff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -946,7 +1048,7 @@ body {
   padding-top: 0;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1199px) {
   .company-activity {
     display: none;
   }

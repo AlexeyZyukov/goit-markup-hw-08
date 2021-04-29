@@ -78,20 +78,20 @@
 
           <!-- фильтр переходов внутри сайта -->
 
-          <ul class="navigation no-list">
-            <li class="navigation__item">
+          <ul class="navigation-btns no-list">
+            <li class="navigation-btns__item">
               <button type="button" class="navigation__btn">Все</button>
             </li>
-            <li class="navigation__item">
+            <li class="navigation-btns__item">
               <button type="button" class="navigation__btn">Веб-сайты</button>
             </li>
-            <li class="navigation__item">
+            <li class="navigation-btns__item">
               <button type="button" class="navigation__btn">Приложения</button>
             </li>
-            <li class="navigation__item">
+            <li class="navigation-btns__item">
               <button type="button" class="navigation__btn">Дизайн</button>
             </li>
-            <li class="navigation__item">
+            <li class="navigation-btns__item">
               <button type="button" class="navigation__btn">Маркетинг</button>
             </li>
           </ul>
@@ -382,73 +382,35 @@
     <footer class="section page-footer">
       <div class="container">
         <div class="footer">
-          <div class="footer-logo-address footer__item">
-            <a
-              class="logo logo--footer no-line"
-              href="WebStudio"
-              rel="noopener noreferrer nofollow"
-              ><span class="logo-color">Web</span>Studio</a
-            >
-            <address class="page-footer-address">
+          <div class="company-info footer__item">
+            <a class="logo logo--footer no-line" href="WebStudio" rel="noopener noreferrer nofollow"><span
+                class="logo-color">Web</span>Studio</a>
+            <address>
               <p class="company-info__item street">
                 г. Киев, пр-т Леси Украинки, 26
               </p>
-              <a
-                class="company-info__item no-line"
-                href="mailto:info@example.com"
-                >info@example.com</a
-              >
-              <a class="company-info__item no-line" href="+380961111111"
-                >+38 096 111 11 11</a
-              >
+              <a class="company-info__item no-line" href="mailto:info@example.com">info@example.com</a>
+              <a class="company-info__item no-line" href="+380961111111">+38 096 111 11 11</a>
             </address>
           </div>
           <div class="join-us footer__item">
             <p class="join-us__appeal">присоединяйтесь</p>
-            <a
-              class="join-us__link instagram no-line"
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferer nofollow"
-            ></a>
-            <a
-              class="join-us__link twitter no-line"
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferer nofollow"
-            ></a>
-            <a
-              class="join-us__link facebook no-line"
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferer nofollow"
-            ></a>
-            <a
-              class="join-us__link linkedin no-line"
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferer nofollow"
-            ></a>
+            <a class="join-us__link instagram no-line" href="https://www.instagram.com" target="_blank"
+              rel="noopener noreferer nofollow"></a>
+            <a class="join-us__link twitter no-line" href="https://twitter.com" target="_blank"
+              rel="noopener noreferer nofollow"></a>
+            <a class="join-us__link facebook no-line" href="https://www.facebook.com" target="_blank"
+              rel="noopener noreferer nofollow"></a>
+            <a class="join-us__link linkedin no-line" href="https://www.linkedin.com" target="_blank"
+              rel="noopener noreferer nofollow"></a>
           </div>
-
+    
           <!-- оформление секции ввода e-mail -->
           <div class="call-to-sign footer__item">
             <p class="call-to-sign__appeal">Подпишитесь на рассылку</p>
-            <form
-              name="call-to-sign__input"
-              class="call-to-sign__input"
-              autocomplete="on"
-            >
-              <input
-                type="email"
-                name="email"
-                placeholder="E-mail"
-                class="call-to-sign__email"
-              />
-              <button
-                type="submit"
-                class="submit button btn btn-hover btn-focus"
-              >
+            <form name="signup-form" class="call-to-sign__input" autocomplete="on">
+              <input type="email" name="email" placeholder="E-mail" class="call-to-sign__email" />
+              <button type="submit" class="submit button btn btn-hover btn-focus">
                 <span>Подписаться</span>
                 <svg width="24" height="24" class="submit__fly">
                   <use href="./images/svg/icons.svg#fly"></use>
