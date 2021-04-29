@@ -1,14 +1,45 @@
 /* formating footer */
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $hero-footer-bcg-color;
+  color: $accent-button-text;
+}
+
+/* сетка элементов футера */
 
 .footer {
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-    justify-content: space-around;
+
+    @media screen and (max-width: 1199px) {
+      justify-content: space-around;
+    }
+  }
+}
+
+// расчет ширины элемента выполнятся
+// от ширины контейнера
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__item {
+    flex-basis: calc((100% / 6) * 3 - 30px);
+    // flex-basis: calc((100% - 2 * 30px) / 2);
 
     &:nth-child(2) {
-      margin-left: 30px;
+      margin-left: 60px;
+    }
+  }
+}
+
+/* расчет ширины элемента выполнятся от ширины 1170px=1200-2*15 */
+@media screen and (min-width: 1200px) {
+  .footer__item {
+    flex-basis: calc((100% / 12) * 3 - 22.5px);
+
+    &:last-of-type {
+      margin-left: 60px;
     }
   }
 }
@@ -21,21 +52,9 @@
   text-align: center;
 }
 
-/* сетка элементов футера */
-// .footer {
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: baseline;
-// }
-
-/* расчет ширины элемента выполнятся от ширины 1170px */
-// .footer__item {
-//   // flex-basis: calc((100% / 12) * 3 - 22.5px);
-
 //   &:not(:first-of-type) {
 //     margin-left: 30px;
 //   }
-// }
 
 /* цвет логотипа Studio изменен на белый */
 .logo--footer {
@@ -58,6 +77,13 @@
 
   .join-us {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .company-info {
+    margin-bottom: 60px;
+    text-align: left;
   }
 }
 

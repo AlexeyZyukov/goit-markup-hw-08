@@ -1,21 +1,36 @@
 /* формирование формы ввода почты в футере */
 .call-to-sign {
-  // flex-grow: 1;
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+  }
 
-  // &__input {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
+  &__input {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+    }
+  }
 
   &__email {
     // padding-left: 16px;
 
     // width: 358px;
-    @media screen and (max-width: 767px) {
-      width: 450px;
-      margin-bottom: 20px;
-    }
     height: 50px;
+    max-width: 450px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-bottom: 0;
+    }
 
     color: #fff;
 
@@ -36,7 +51,6 @@
     &::placeholder {
       font-size: 16px;
       line-height: 1.25;
-      /* identical to box height, or 125% */
       letter-spacing: 0.03em;
 
       color: rgba(255, 255, 255, 0.6);
@@ -46,6 +60,7 @@
 
 .submit {
   display: inline-flex;
+  align-self: center;
   justify-content: center;
   align-items: center;
   width: 200px;

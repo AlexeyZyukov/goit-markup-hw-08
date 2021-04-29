@@ -256,21 +256,18 @@ body {
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
-    background-color: #73fc24;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
-    background-color: #fabaf7;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    background-color: #eff7a6;
   }
 }
 
@@ -710,8 +707,29 @@ body {
 }
 
 /* формирование формы ввода почты в футере */
+@media screen and (min-width: 1200px) {
+  .call-to-sign {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .call-to-sign__input {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .call-to-sign__input {
+    justify-content: space-between;
+  }
+}
+
 .call-to-sign__email {
   height: 50px;
+  max-width: 450px;
+  margin-bottom: 20px;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
@@ -720,10 +738,16 @@ body {
   background-color: transparent;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .call-to-sign__email {
     width: 450px;
-    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .call-to-sign__email {
+    width: 358px;
+    margin-bottom: 0;
   }
 }
 
@@ -734,13 +758,13 @@ body {
 .call-to-sign__email::placeholder {
   font-size: 16px;
   line-height: 1.25;
-  /* identical to box height, or 125% */
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .submit {
   display: inline-flex;
+  align-self: center;
   justify-content: center;
   align-items: center;
   width: 200px;
@@ -1049,6 +1073,20 @@ body {
   margin-bottom: 16px;
 }
 
+@media screen and (max-width: 767px) {
+  .ourteam-members__img {
+    width: 450px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ourteam-members__img {
+    width: 354px;
+    height: auto;
+  }
+}
+
 /* our customers */
 .customers-section__header {
   font-weight: 700;
@@ -1123,15 +1161,44 @@ body {
 }
 
 /* formating footer */
+.page-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: #2f303a;
+  color: #ffffff;
+}
+
+/* сетка элементов футера */
 @media screen and (min-width: 768px) {
   .footer {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
     justify-content: space-around;
   }
-  .footer:nth-child(2) {
-    margin-left: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__item {
+    flex-basis: calc((100% / 6) * 3 - 30px);
+  }
+  .footer__item:nth-child(2) {
+    margin-left: 60px;
+  }
+}
+
+/* расчет ширины элемента выполнятся от ширины 1170px=1200-2*15 */
+@media screen and (min-width: 1200px) {
+  .footer__item {
+    flex-basis: calc((100% / 12) * 3 - 22.5px);
+  }
+  .footer__item:last-of-type {
+    margin-left: 60px;
   }
 }
 
@@ -1143,8 +1210,6 @@ body {
   text-align: center;
 }
 
-/* сетка элементов футера */
-/* расчет ширины элемента выполнятся от ширины 1170px */
 /* цвет логотипа Studio изменен на белый */
 .logo--footer {
   margin-bottom: 20px;
@@ -1165,6 +1230,13 @@ body {
   }
   .join-us {
     margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .company-info {
+    margin-bottom: 60px;
+    text-align: left;
   }
 }
 

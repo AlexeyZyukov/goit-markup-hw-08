@@ -68,15 +68,17 @@
     margin-bottom: 16px;
   }
 
-  // &__img {
-  //   @media screen and (max-width: 767px) {
-  //     width: 450px;
-  //     height: 460px;
-  //   }
+  // размеры фотографий заданы временно до скачивания нужных
+  // размеров фото с макета
+  &__img {
+    @media screen and (max-width: 767px) {
+      width: 450px;
+      height: auto;
+    }
 
-  //   @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //     width: 354px;
-  //     height: 374px;
-  //   }
-  // }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 354px;
+      height: auto;
+    }
+  }
 }
