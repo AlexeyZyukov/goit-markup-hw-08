@@ -6,7 +6,7 @@
   &__header {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.05;
+    line-height: 1.15;
     text-align: center;
     letter-spacing: 0.03em;
 
@@ -72,7 +72,7 @@
 
 .registration-form__comment {
   resize: none;
-  width: 448px;
+  max-width: 448px;
   height: 120px;
   padding: 12px 16px;
 }
