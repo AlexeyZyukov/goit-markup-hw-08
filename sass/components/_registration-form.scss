@@ -81,8 +81,8 @@
 
 .form-check {
   display: flex;
-  position: relative;
-  align-items: center;
+  // position: relative;
+  align-items: baseline;
   margin-top: 20px;
   margin-bottom: 30px;
 
@@ -90,13 +90,25 @@
     line-height: 1.71;
     color: $secondary-text-color;
     margin-right: 0.3em;
+
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+      line-height: 1.17;
+      margin-right: 0.2em;
+    }
   }
 
   &__link {
-    display: inline-flex;
+    // display: inline-flex;
+    // align-self: center;
     height: 15px;
     color: $accent-color;
     border-bottom: 1px solid $accent-color;
+
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
 }
 
@@ -124,9 +136,10 @@
 
 /* формируем кастомный чек-бокс */
 .form-check__box {
+  align-self: center;
   width: 16px;
   height: 15px;
-  margin-right: 9px;
+  margin-right: 8px;
   overflow: hidden;
   border-radius: 0.05em;
   background-color: rgb(250, 250, 250);

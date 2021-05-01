@@ -157,7 +157,6 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
-  outline: 1px dashed red;
 }
 
 /* сброс стиля кнопок */
@@ -380,13 +379,9 @@ body {
 
 .current::after {
   content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -1px;
-  transform: translate(-50%, 0);
   width: 48px;
   height: 4px;
-  background-image: url(../images/svg/line.svg);
+  background-image: url(/images/svg/line.svg);
   background-repeat: no-repeat;
 }
 
@@ -401,7 +396,6 @@ body {
   line-height: 1.19;
   padding-top: 24px;
   padding-bottom: 24px;
-  border: 1px solid green;
 }
 
 .logo-color {
@@ -420,7 +414,7 @@ body {
 
 .mobile-menu-btn {
   position: absolute;
-  z-index: 10;
+  z-index: 3;
   right: 0;
   top: 10px;
   width: 40px;
@@ -464,7 +458,7 @@ body {
   transform: translate(100%, 100%) scale(1);
   width: 100%;
   min-width: 320px;
-  height: 796px;
+  height: 100vh;
   padding: 40px 41px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -532,24 +526,18 @@ body {
 }
 
 .mobile-menu-social__link {
+  display: inline-flex;
   font-weight: 500;
   font-size: 18px;
-  line-height: 1.22px;
   letter-spacing: 0.02em;
   color: #2196f3;
 }
 
-.mobile-menu-social__link:not(:last-child) {
-  margin-right: 10px;
-}
-
-.mobile-menu-social__link:not(:last-child)::after {
-  content: '';
-  width: 1px;
+.mobile-menu-social__link:not(:last-of-type) {
   height: 22px;
-  background-image: url(/images/mainpage/Line_vertical.svg);
-  background-repeat: no-repeat;
-  margin-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
 .backdrop {
@@ -700,8 +688,7 @@ body {
 /* форма принятия условий */
 .form-check {
   display: flex;
-  position: relative;
-  align-items: center;
+  align-items: baseline;
   margin-top: 20px;
   margin-bottom: 30px;
 }
@@ -712,11 +699,25 @@ body {
   margin-right: 0.3em;
 }
 
+@media screen and (max-width: 767px) {
+  .form-check__agreement {
+    font-size: 12px;
+    line-height: 1.17;
+    margin-right: 0.2em;
+  }
+}
+
 .form-check__link {
-  display: inline-flex;
   height: 15px;
   color: #2196f3;
   border-bottom: 1px solid #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .form-check__link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .form-send {
@@ -741,9 +742,10 @@ body {
 } */
 /* формируем кастомный чек-бокс */
 .form-check__box {
+  align-self: center;
   width: 16px;
   height: 15px;
-  margin-right: 9px;
+  margin-right: 8px;
   overflow: hidden;
   border-radius: 0.05em;
   background-color: #fafafa;
