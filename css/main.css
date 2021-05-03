@@ -400,15 +400,12 @@ body {
 
 .current::after {
   content: '';
+  display: block;
   width: 48px;
   height: 4px;
   background-image: url(/images/svg/line.svg);
   background-repeat: no-repeat;
   margin: 0 auto;
-  position: absolute;
-  left: 50%;
-  bottom: -1px;
-  transform: translate(-50%, 0);
 }
 
 /* logo style */
