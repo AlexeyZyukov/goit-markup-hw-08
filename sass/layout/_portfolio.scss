@@ -12,6 +12,24 @@
     margin-top: $card-set-gap;
     margin-left: $card-set-gap;
   }
+
+  &__item {
+    @media screen and (max-width: 767px) {
+      flex-basis: calc((100% - #{$card-set-gap} * 1));
+
+      margin-top: $card-set-gap;
+      margin-left: $card-set-gap;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-basis: calc((100% - #{$card-set-gap} * 2) / 2);
+
+      margin-top: $card-set-gap;
+      margin-left: $card-set-gap;
+    }
+  }
 }
 
 /* Описание работ Portfolio */

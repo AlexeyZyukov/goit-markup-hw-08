@@ -5,11 +5,13 @@
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (max-width: 767px) {
-  .header-navigation {
+.header-navigation {
+  display: flex;
+  align-items: baseline;
+
+  @media screen and (max-width: 767px) {
     position: relative;
-    display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
   }
 }
 /* flexbox для header */
@@ -22,8 +24,7 @@
 
 @media screen and (min-width: 768px) {
   .header-navigation {
-    display: flex;
-    align-items: baseline;
+    justify-content: space-between;
   }
   .navigation-block {
     display: flex;
@@ -33,11 +34,11 @@
 
     // /* установка расстояния 50px между элементами */
     &__item:not(:last-child) {
+      position: relative;
       margin-right: 50px;
     }
 
     &__link {
-      // position: relative;
       display: block;
       padding-top: 32px;
       padding-bottom: 32px;
@@ -48,9 +49,6 @@
       &:hover,
       &:focus {
         color: $accent-color;
-      }
-      &__link + &__link {
-        margin-left: 50px;
       }
     }
   }
@@ -64,16 +62,22 @@
 
   .contacts {
     display: flex;
+    align-items: baseline;
 
-    & > .contacts__link {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding-top: 32px;
-      padding-bottom: 32px;
+    // @media screen and (min-width: 1200px) {
+    //   margin-left: 331px;
+    // }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-direction: column;
+      align-self: center;
     }
 
     &__link {
+      // display: inline-flex;
+      // justify-content: center;
+      padding-top: 32px;
+      padding-bottom: 32px;
       color: $secondary-text-color;
       transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -87,6 +91,20 @@
       &:hover .smartphone,
       &:focus .smartphone {
         fill: $accent-color;
+      }
+
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding: 0;
+
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        &:not(:last-of-type) {
+          margin-right: 50px;
+        }
       }
     }
   }

@@ -20,15 +20,12 @@
 
       margin-top: #{$card-set-gap};
       margin-left: #{$card-set-gap};
-
-      background-color: yellow;
     }
 
     @media screen and (min-width: 1200px) {
       flex-basis: calc((100% - #{$card-set-gap} * 4) / 4);
       margin-top: #{$card-set-gap};
       margin-left: #{$card-set-gap};
-      background-color: rgb(186, 241, 142);
 
       // .priorities__item + .priorities__item {
       //   margin-left: 30px;
