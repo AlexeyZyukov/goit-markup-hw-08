@@ -221,11 +221,21 @@
           <ul class="activity-description no-list">
             <li class="activity-description__item">
               <div class="activity-description__thumb">
-                <img
-                  src="./images/mainpage/box_1.jpg"
-                  alt="программист, за рабочим столом, работающий на компьютере"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activity/box1.jpg    1x,
+                      ./images/activity/box1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                  <img
+                    src="./images/activity/box_1.jpg"
+                    alt="программист, за рабочим столом, работающий на компьютере"
+                    width="370"
+                  />
+                </picture>
                 <p class="activity-description__thumb-text">
                   Десктопные приложения
                 </p>
@@ -233,8 +243,18 @@
             </li>
             <li class="activity-description__item">
               <div class="activity-description__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activity/box2.jpg    1x,
+                      ./images/activity/box2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                </picture>
                 <img
-                  src="./images/mainpage/box_2.jpg"
+                  src="./images/activity/box_2.jpg"
                   alt="веб-дизайнер разрабывает приложение для смартфонов"
                   width="370"
                 />
@@ -245,8 +265,18 @@
             </li>
             <li class="activity-description__item">
               <div class="activity-description__thumb">
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activity/box3.jpg    1x,
+                      ./images/activity/box3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                    type="image/jpeg"
+                  />
+                </picture>
                 <img
-                  src="./images/mainpage/box_3.jpg"
+                  src="./images/activity/box_3.jpg"
                   alt="креативный художник веб-дизайнер выбирает цвет на графическом планшете"
                   width="370"
                 />
@@ -265,12 +295,22 @@
           <h2 class="ourteam__header">Наша команда</h2>
           <ul class="ourteam-members no-list">
             <li class="ourteam-members__item">
-              <img
-                class="ourteam-members__img"
-                src="./images/mainpage/IDimg(1).jpg"
-                alt="Игорь Демьяненко, Product Designer"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mobile/i.d.mobile.jpg    1x,
+                    ./images/team/mobile/i.d.mobile@2x.jpg
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
 
+                <img
+                  class="ourteam-members__img"
+                  src="./images/team/IDimg(1).jpg"
+                  alt="Игорь Демьяненко, Product Designer"
+                />
+              </picture>
               <div class="ourteam-members__title">
                 <h3 class="ourteam-members__name">Игорь Демьяненко</h3>
                 <p class="ourteam-members__position">Product Manager</p>
@@ -330,7 +370,7 @@
             <li class="ourteam-members__item">
               <img
                 class="ourteam-members__img"
-                src="./images/mainpage/ORimg(1).jpg"
+                src="./images/team/ORimg(1).jpg"
                 alt="Ольга Репина, Frontend Developer"
               />
               <div class="ourteam-members__title">
@@ -392,7 +432,7 @@
             <li class="ourteam-members__item">
               <img
                 class="ourteam-members__img"
-                src="./images/mainpage/NTimg(1).jpg"
+                src="./images/team/NTimg(1).jpg"
                 alt="Николай Тарасов, Marketing"
               />
               <div class="ourteam-members__title">
@@ -454,7 +494,7 @@
             <li class="ourteam-members__item">
               <img
                 class="ourteam-members__img"
-                src="./images/mainpage/MEimg(1).jpg"
+                src="./images/team/MEimg(1).jpg"
                 alt="Михаил Ермаков, UI Designer"
               />
               <div class="ourteam-members__title">
