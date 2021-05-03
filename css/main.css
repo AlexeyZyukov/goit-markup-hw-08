@@ -484,6 +484,10 @@ body {
   width: 100%;
   min-width: 320px;
   height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  background-color: #fff;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -493,13 +497,6 @@ body {
 
 .mobile-menu.is-open {
   transform: translate(0, 0);
-}
-
-.mobile-menu {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  background-color: #fff;
 }
 
 .mobile-menu-navigation {

@@ -59,6 +59,11 @@
   min-width: 320px;
   height: 100vh;
   // padding: 40px 41px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+
+  background-color: #fff;
 
   background: $body-bcg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -71,14 +76,6 @@
   &.is-open {
     transform: translate(0, 0);
   }
-}
-
-.mobile-menu {
-  padding-top: 48px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-
-  background-color: #fff;
 }
 
 .mobile-menu-navigation {
