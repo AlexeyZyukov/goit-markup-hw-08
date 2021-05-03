@@ -64,18 +64,15 @@
     display: flex;
     align-items: baseline;
 
-    // @media screen and (min-width: 1200px) {
-    //   margin-left: 331px;
-    // }
-
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       flex-direction: column;
       align-self: center;
     }
 
     &__link {
-      // display: inline-flex;
-      // justify-content: center;
+      display: inline-flex;
+      align-items: center;
+
       padding-top: 32px;
       padding-bottom: 32px;
       color: $secondary-text-color;
