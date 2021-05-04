@@ -1,9 +1,14 @@
 /* formating footer */
+
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $hero-footer-bcg-color;
   color: $accent-button-text;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 /* сетка элементов футера */
@@ -13,10 +18,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
-
-    @media screen and (max-width: 1199px) {
-      justify-content: space-around;
-    }
+  }
+  @media screen and (max-width: 1199px) {
+    justify-content: space-around;
   }
 }
 
@@ -39,22 +43,10 @@
     flex-basis: calc((100% / 12) * 3 - 22.5px);
 
     &:last-of-type {
-      margin-left: 60px;
+      margin-left: 30px;
     }
   }
 }
-
-.page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: $hero-footer-bcg-color;
-  color: $accent-button-text;
-  text-align: center;
-}
-
-//   &:not(:first-of-type) {
-//     margin-left: 30px;
-//   }
 
 /* цвет логотипа Studio изменен на белый */
 .logo--footer {

@@ -880,8 +880,13 @@ body {
   fill: #ffffff;
 }
 
-.join-us__appeal,
-.subscribe__appeal {
+@media screen and (min-width: 1200px) {
+  .join-us {
+    margin-left: 30px;
+  }
+}
+
+.join-us__appeal {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -931,6 +936,13 @@ body {
   }
 }
 
+.subscribe__appeal {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 767px) {
   .subscribe__input {
     display: flex;
@@ -940,6 +952,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .subscribe__input {
+    display: flex;
     justify-content: space-between;
   }
 }
@@ -1419,6 +1432,12 @@ body {
   color: #ffffff;
 }
 
+@media screen and (max-width: 1199px) {
+  .page-footer {
+    text-align: center;
+  }
+}
+
 /* сетка элементов футера */
 @media screen and (min-width: 768px) {
   .footer {
@@ -1428,7 +1447,7 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .footer {
     justify-content: space-around;
   }
@@ -1449,16 +1468,8 @@ body {
     flex-basis: calc((100% / 12) * 3 - 22.5px);
   }
   .footer__item:last-of-type {
-    margin-left: 60px;
+    margin-left: 30px;
   }
-}
-
-.page-footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #2f303a;
-  color: #ffffff;
-  text-align: center;
 }
 
 /* цвет логотипа Studio изменен на белый */

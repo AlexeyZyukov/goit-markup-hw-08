@@ -4,6 +4,14 @@
     flex-grow: 1;
   }
 
+  &__appeal {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    color: $accent-button-text;
+  }
+
   &__input {
     @media screen and (max-width: 767px) {
       display: flex;
@@ -11,6 +19,7 @@
     }
 
     @media screen and (min-width: 1200px) {
+      display: flex;
       justify-content: space-between;
     }
   }
