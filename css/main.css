@@ -1057,8 +1057,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   max-width: 100%;
-  height: 400px;
+  height: 600px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero__bg-image {
+    height: 400px;
+  }
 }
 
 /* формирование padding секции hero и отступа перед кнопкой*/
@@ -1066,12 +1072,24 @@ body {
   padding: 118px 60px;
 }
 
+@media screen and (min-width: 1199px) {
+  .hero-paddings {
+    padding: 200px;
+  }
+}
+
 .hero__definition {
   text-align: center;
-  max-width: 630px;
+  max-width: 696px;
   margin-right: auto;
   margin-left: auto;
   color: #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .hero__definition {
+    max-width: 360px;
+  }
 }
 
 .hero__title {
@@ -1082,6 +1100,13 @@ body {
   line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1199px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 /* Приоритеты компании  */
