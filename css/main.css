@@ -881,7 +881,7 @@ body {
 }
 
 .join-us__appeal,
-.call-to-sign__appeal {
+.subscribe__appeal {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -926,25 +926,25 @@ body {
 
 /* формирование формы ввода почты в футере */
 @media screen and (min-width: 1200px) {
-  .call-to-sign {
+  .subscribe {
     flex-grow: 1;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .call-to-sign__input {
+  .subscribe__input {
     display: flex;
     flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .call-to-sign__input {
+  .subscribe__input {
     justify-content: space-between;
   }
 }
 
-.call-to-sign__email {
+.subscribe__email {
   height: 50px;
   max-width: 450px;
   margin-bottom: 20px;
@@ -957,23 +957,23 @@ body {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .call-to-sign__email {
+  .subscribe__email {
     width: 450px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .call-to-sign__email {
+  .subscribe__email {
     width: 358px;
     margin-bottom: 0;
   }
 }
 
-.call-to-sign__email:invalid:not(:focus) {
+.subscribe__email:invalid:not(:focus) {
   color: red;
 }
 
-.call-to-sign__email::placeholder {
+.subscribe__email::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
