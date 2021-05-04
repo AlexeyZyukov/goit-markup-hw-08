@@ -55,10 +55,14 @@
   top: 0;
   transform: translate(100%, 100%) scale(1);
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 100%;
   min-width: 320px;
-  height: 100vh;
-  // padding: 40px 41px;
+  height: 100%;
+
   padding-top: 48px;
   padding-bottom: 48px;
   padding-left: 40px;
@@ -79,7 +83,7 @@
 }
 
 .mobile-menu-navigation {
-  margin-bottom: 302px;
+  flex-grow: 1;
 }
 
 .mobile-menu-navigation__link {
@@ -127,10 +131,11 @@
 
 .mobile-menu-social {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mobile-menu-social__link {
-  display: inline-flex;
+  // display: inline-flex;
   font-weight: 500;
   font-size: 18px;
   // line-height: 1.22px;
