@@ -570,6 +570,7 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
+  z-index: 4;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   visibility: visible;
@@ -602,8 +603,9 @@ body {
 
 @media screen and (max-width: 767px) {
   .modal {
-    width: 450px;
-    height: 609px;
+    width: fit-content;
+    max-width: 450px;
+    min-height: 609px;
   }
 }
 
@@ -731,12 +733,6 @@ body {
   }
 }
 
-.form-check__link {
-  height: 15px;
-  color: #2196f3;
-  border-bottom: 1px solid #2196f3;
-}
-
 @media screen and (max-width: 767px) {
   .form-check__link {
     font-size: 12px;
@@ -767,11 +763,11 @@ body {
 /* формируем кастомный чек-бокс */
 .form-check__box {
   align-self: center;
-  width: 16px;
-  height: 15px;
+  min-width: 16px;
+  min-height: 15px;
   margin-right: 8px;
   overflow: hidden;
-  border-radius: 0.05em;
+  border-radius: 1px;
   background-color: #fafafa;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -783,6 +779,8 @@ body {
 .form-check__input:checked + .form-check__box {
   background-color: #2196f3;
   background-image: url(../images/svg/check_mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .form-check__input:focus + .form-check__box {
@@ -1583,5 +1581,11 @@ body {
 
 .our-projects__link:hover, .our-projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .additional-padding {
+    padding-bottom: 56px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

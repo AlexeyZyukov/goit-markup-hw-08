@@ -81,7 +81,7 @@
 
 .form-check {
   display: flex;
-  // position: relative;
+
   align-items: baseline;
   margin-top: 20px;
   margin-bottom: 30px;
@@ -99,11 +99,9 @@
   }
 
   &__link {
-    // display: inline-flex;
-    // align-self: center;
-    height: 15px;
-    color: $accent-color;
-    border-bottom: 1px solid $accent-color;
+    // min-height: 15px;
+    // color: $accent-color;
+    // border-bottom: 1px solid $accent-color;
 
     @media screen and (max-width: 767px) {
       font-size: 12px;
@@ -137,11 +135,12 @@
 /* формируем кастомный чек-бокс */
 .form-check__box {
   align-self: center;
-  width: 16px;
-  height: 15px;
+  min-width: 16px;
+  min-height: 15px;
   margin-right: 8px;
+
   overflow: hidden;
-  border-radius: 0.05em;
+  border-radius: 1px;
   background-color: rgb(250, 250, 250);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -151,6 +150,8 @@
   .form-check__input:checked + & {
     background-color: $accent-color;
     background-image: url(../images/svg/check_mark.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
   /* Focused */
   .form-check__input:focus + & {
