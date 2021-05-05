@@ -405,8 +405,7 @@ body {
   display: block;
   width: 48px;
   height: 4px;
-  background-image: url(/images/svg/line.svg);
-  background-color: #2196f3;
+  background-image: url(../images/svg/line.svg);
   background-repeat: no-repeat;
   margin: 0 auto;
 }
