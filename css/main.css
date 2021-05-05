@@ -714,16 +714,8 @@ body {
 /* форма принятия условий */
 .form-check {
   display: flex;
-  align-items: baseline;
   margin-top: 20px;
   margin-bottom: 30px;
-}
-
-@media screen and (max-width: 767px) {
-  .form-check {
-    font-size: 12px;
-    line-height: 1.17;
-  }
 }
 
 .form-check__agreement {
@@ -734,6 +726,8 @@ body {
 
 @media screen and (max-width: 767px) {
   .form-check__agreement {
+    font-size: 12px;
+    line-height: 1.17;
     margin-right: 0.2em;
   }
 }
@@ -742,6 +736,13 @@ body {
   min-height: 15px;
   color: #2196f3;
   border-bottom: 1px solid #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .form-check__link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .form-check__text {
@@ -760,7 +761,7 @@ body {
 
 /* формируем кастомный чек-бокс */
 .form-check__box {
-  align-self: center;
+  display: block;
   min-width: 16px;
   min-height: 15px;
   margin-right: 8px;
@@ -777,8 +778,6 @@ body {
 .form-check__input:checked + .form-check__box {
   background-color: #2196f3;
   background-image: url(../images/svg/check_mark.svg);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .form-check__input:focus + .form-check__box {
@@ -1061,18 +1060,48 @@ body {
 }
 
 .hero__bg-image {
-  background-color: #c4c4c4;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/Hero_bcg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
   max-width: 100%;
   height: 600px;
   margin: 0 auto;
+  background-color: #c4c4c4;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero.desktop.jpg);
 }
 
 @media screen and (max-width: 1199px) {
   .hero__bg-image {
     height: 400px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__bg-image {
+    background-image: url(../images/hero/hero.desktop@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .hero__bg-image {
+    background-image: url(../images/hero/hero.mobile.jpg);
+  }
+}
+
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+  .hero__bg-image {
+    background-image: url(../images/hero/hero.mobile@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero__bg-image {
+    background-image: url(../images/hero/hero.tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero__bg-image {
+    background-image: url(../images/hero/hero.tablet@2x.jpg);
   }
 }
 

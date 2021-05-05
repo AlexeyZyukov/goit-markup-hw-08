@@ -300,13 +300,28 @@
               <picture>
                 <source
                   srcset="
+                    ./images/team/desktop/i.d.desktop.jpg    1x,
+                    ./images/team/desktop/i.d.desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/i.d.tablet.jpg    1x,
+                    ./images/team/tablet/i.d.tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
                     ./images/team/mobile/i.d.mobile.jpg    1x,
-                    ./images/team/mobile/i.d.mobile@2x.jpg
+                    ./images/team/mobile/i.d.mobile@2x.jpg 2x
                   "
                   media="(max-width: 767px)"
                   type="image/jpeg"
                 />
-
                 <img
                   class="ourteam-members__img"
                   src="./images/team/IDimg(1).jpg"
@@ -370,11 +385,37 @@
             </li>
 
             <li class="ourteam-members__item">
-              <img
-                class="ourteam-members__img"
-                src="./images/team/ORimg(1).jpg"
-                alt="Ольга Репина, Frontend Developer"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/o.r.desktop.jpg    1x,
+                    ./images/team/desktop/o.r.desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/o.r.tablet.jpg    1x,
+                    ./images/team/tablet/o.r.tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    /images/team/mobile/o.r.mobile.jpg    1x,
+                    /images/team/mobile/o.r.mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="ourteam-members__img"
+                  src="./images/team/ORimg(1).jpg"
+                  alt="Ольга Репина, Frontend Developer"
+                />
+              </picture>
               <div class="ourteam-members__title">
                 <h3 class="ourteam-members__name">Ольга Репина</h3>
                 <p class="ourteam-members__position">Frontend Developer</p>
@@ -432,11 +473,38 @@
             </li>
 
             <li class="ourteam-members__item">
-              <img
-                class="ourteam-members__img"
-                src="./images/team/NTimg(1).jpg"
-                alt="Николай Тарасов, Marketing"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/n.t.desktop.jpg    1x,
+                    ./images/team/desktop/n.t.desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/n.t.tablet.jpg    1x,
+                    ./images/team/tablet/n.t.tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    /images/team/mobile/n.t.mobile.jpg    1x,
+                    /images/team/mobile/n.t.mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="ourteam-members__img"
+                  src="./images/team/NTimg(1).jpg"
+                  alt="Николай Тарасов, Marketing"
+                />
+              </picture>
+
               <div class="ourteam-members__title">
                 <h3 class="ourteam-members__name">Николай Тарасов</h3>
                 <p class="ourteam-members__position">Marketing</p>
@@ -494,11 +562,38 @@
             </li>
 
             <li class="ourteam-members__item">
-              <img
-                class="ourteam-members__img"
-                src="./images/team/MEimg(1).jpg"
-                alt="Михаил Ермаков, UI Designer"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/m.e.desktop.jpg    1x,
+                    ./images/team/desktop/m.e.desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    ./images/team/tablet/m.e.tablet.jpg    1x,
+                    ./images/team/tablet/m.e.tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="
+                    /images/team/mobile/m.e.mobile.jpg    1x,
+                    /images/team/mobile/m.e.mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpeg"
+                />
+                <img
+                  class="ourteam-members__img"
+                  src="./images/team/MEimg(1).jpg"
+                  alt="Михаил Ермаков, UI Designer"
+                />
+              </picture>
+
               <div class="ourteam-members__title">
                 <h3 class="ourteam-members__name">Михаил Ермаков</h3>
                 <p class="ourteam-members__position">UI Designer</p>
@@ -779,12 +874,14 @@
           </textarea>
 
           <div class="form-check">
-            <input
-              class="form-check__input visually-hidden"
-              type="checkbox"
-              required
-            />
-            <span class="form-check__box"></span>
+            <label>
+              <input
+                class="form-check__input visually-hidden"
+                type="checkbox"
+                required
+              />
+              <span class="form-check__box"></span>
+            </label>
 
             <div class="form-check__text">
               <span class="form-check__agreement"
