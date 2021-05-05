@@ -63,7 +63,7 @@
 
 .customers-list__icon {
   .customers-list__link:hover &,
-  .customers-list__link:focus {
+  .customers-list__link:focus & {
     fill: $accent-color;
   }
 }

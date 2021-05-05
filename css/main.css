@@ -1445,7 +1445,7 @@ body {
 }
 
 .customers-list__link:hover .customers-list__icon,
-.customers-list__icon .customers-list__link:focus {
+.customers-list__link:focus .customers-list__icon {
   fill: #2196f3;
 }
 
