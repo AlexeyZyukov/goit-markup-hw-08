@@ -1042,6 +1042,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .navigation-btns {
+    justify-content: flex-start;
     margin-bottom: 40px;
   }
 }
