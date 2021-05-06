@@ -9,14 +9,14 @@
   display: flex;
   align-items: baseline;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     position: relative;
     flex-wrap: wrap;
   }
 }
 /* flexbox для header */
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .logo {
     justify-content: start;
   }
@@ -125,7 +125,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.98px) {
   .navigation,
   .contacts {
     display: none;
