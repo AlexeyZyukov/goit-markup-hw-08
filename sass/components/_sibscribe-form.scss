@@ -4,6 +4,10 @@
     flex-grow: 1;
   }
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
   &__appeal {
     font-weight: 700;
     text-transform: uppercase;
