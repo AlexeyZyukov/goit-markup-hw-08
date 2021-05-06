@@ -15,7 +15,7 @@
 
   &__item {
     @media screen and (max-width: 767px) {
-      flex-basis: calc((100% - #{$card-set-gap} * 1));
+      flex-basis: calc(100% - #{$card-set-gap});
 
       margin-top: $card-set-gap;
       margin-left: $card-set-gap;
