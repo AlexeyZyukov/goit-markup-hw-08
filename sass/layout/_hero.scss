@@ -3,9 +3,17 @@
   padding: 0;
 }
 
-/* формирование padding секции hero и отступа перед кнопкой*/
+/* формирование paddings секции hero и отступа перед кнопкой*/
 .hero-paddings {
   padding: 118px 60px;
+
+  @media screen and (min-width: 280px) and (max-width: 319.98px) {
+    padding: 80px 30px;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 380px) {
+    padding: 96px 50px;
+  }
 
   @media screen and (min-width: 1199px) {
     padding: 200px;
