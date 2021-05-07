@@ -4,7 +4,6 @@
 
 .current::after {
   content: '';
-  display: block;
 
   width: 48px;
   height: 4px;
@@ -14,10 +13,8 @@
 
   margin: 0 auto;
 
-  // position: absolute;
-  // left: 50%;
-  // bottom: -1px;
-  // transform: translate(-50%, 0);
-
-  // z-index: 1;
+  position: absolute;
+  left: 50%;
+  bottom: -1px;
+  transform: translate(-50%, 0);
 }
