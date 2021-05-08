@@ -99,9 +99,8 @@
   }
 
   &__link {
-    min-height: 15px;
     color: $accent-color;
-    border-bottom: 1px solid $accent-color;
+    text-underline-position: under;
 
     @media screen and (max-width: 767.98px) {
       font-size: 12px;
