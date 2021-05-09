@@ -96,6 +96,10 @@
 
   color: $main-text-color;
 
+  @media screen and (max-height: 440px) {
+    font-size: 24px;
+  }
+
   &.current-mobile {
     color: $accent-color;
   }
@@ -107,6 +111,10 @@
 
   margin-bottom: 64px;
 
+  @media screen and (max-height: 440px) {
+    margin-bottom: 10px;
+  }
+
   &__link[href='+380961111111'] {
     font-weight: 500;
     font-size: 34px;
@@ -115,6 +123,10 @@
     letter-spacing: 0.02em;
 
     color: $accent-color;
+
+    @media screen and (max-height: 440px) {
+      font-size: 24px;
+    }
   }
 
   &__link[href='mailto:info@devstudio.com'] {
@@ -128,6 +140,10 @@
 
 .item-distance {
   margin-bottom: 32px;
+
+  @media screen and (max-height: 440px) {
+    margin-bottom: 10px;
+  }
 }
 
 .mobile-menu-social {
