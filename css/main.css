@@ -985,6 +985,7 @@ body {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: #ffffff;
+  opacity: 0;
   padding: 77px 24px;
 }
 
@@ -1024,6 +1025,12 @@ body {
 .our-projects__link:focus .overaly__item {
   transform: translateY(0);
   background-color: #2196f3;
+  opacity: 1;
+}
+
+.our-projects__link:hover .overaly__text,
+.our-projects__link:focus .overaly__text {
+  opacity: 1;
 }
 
 .icon {

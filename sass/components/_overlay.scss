@@ -23,6 +23,7 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: $accent-button-text;
+    opacity: 0;
 
     padding: 77px 24px;
 
@@ -55,5 +56,13 @@
   .our-projects__link:focus & {
     transform: translateY(0);
     background-color: $accent-color;
+    opacity: 1;
+  }
+}
+
+.overaly__text {
+  .our-projects__link:hover &,
+  .our-projects__link:focus & {
+    opacity: 1;
   }
 }
