@@ -1493,6 +1493,10 @@ body {
   margin-bottom: 16px;
 }
 
+.ourteam-members__img {
+  width: 270px;
+}
+
 @media screen and (max-width: 767.98px) {
   .ourteam-members__img {
     width: 450px;

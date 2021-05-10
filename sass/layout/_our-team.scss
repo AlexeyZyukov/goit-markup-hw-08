@@ -71,6 +71,8 @@
   // размеры фотографий заданы временно до скачивания нужных
   // размеров фото с макета
   &__img {
+    width: 270px;
+
     @media screen and (max-width: 767.98px) {
       width: 450px;
       height: auto;
